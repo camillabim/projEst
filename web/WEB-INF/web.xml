@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app version="3.1" xmlns="http://xmlns.jcp.org/xml/ns/javaee" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd">
+    <servlet>
+        <servlet-name>PessoaJuridicaServlet</servlet-name>
+        <servlet-class>br.com.estacio.controll.PessoaJuridicaServlet</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>Footer</servlet-name>
+        <jsp-file>/footer.jsp</jsp-file>
+    </servlet>
+    <servlet>
+        <servlet-name>Header</servlet-name>
+        <jsp-file>/header.jsp</jsp-file>
+    </servlet>
+    <servlet>
+        <servlet-name>listarPessoaJuridica</servlet-name>
+        <jsp-file>/WEB-INF/listas/listaPessoaJuridica.jsp</jsp-file>
+    </servlet>
+    <servlet>
+        <servlet-name>Menu</servlet-name>
+        <jsp-file>/WEB-INF/menus/menu.jsp</jsp-file>
+    </servlet>
+    <servlet>
+        <servlet-name>Formulario Cadastro Pessoa Juridica</servlet-name>
+        <jsp-file>/WEB-INF/formCadastro/formCadPessoaJuridica.jsp</jsp-file>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>PessoaJuridicaServlet</servlet-name>
+        <url-pattern>/PessoaJuridicaServlet</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>Footer</servlet-name>
+        <url-pattern>/footer</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>Header</servlet-name>
+        <url-pattern>/header</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>listarPessoaJuridica</servlet-name>
+        <url-pattern>/listarPessoaJuridica</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>Menu</servlet-name>
+        <url-pattern>/menu</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>Formulario Cadastro Pessoa Juridica</servlet-name>
+        <url-pattern>/formCadPessoaJuridica</url-pattern>
+    </servlet-mapping>
+    <session-config>
+        <session-timeout>
+            30
+        </session-timeout>
+    </session-config>
+</web-app>
