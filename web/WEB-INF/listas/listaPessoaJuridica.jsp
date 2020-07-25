@@ -16,6 +16,7 @@
     <div class="form-row">
         <div class="form-group col-md-2"> 
             <label for="codigo">Código</label>
+            <input type="hidden" name="codigo" value="${pj.codigo}"/>
             <input type="text" class="form-control form-control-sm" id="codigo" disabled  name="codigo" value="${pj.codigo}">
         </div>  
         <div class="form-group col-md-5">

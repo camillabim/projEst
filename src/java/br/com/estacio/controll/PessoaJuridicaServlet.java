@@ -132,7 +132,7 @@ public class PessoaJuridicaServlet extends HttpServlet {
 
         PessoaJuridica pj = new PessoaJuridica(null, nomeFantasia, razaoSocial, cnpj, inscricaoEstadual, inscricaoMunicipal);
 
-        if (codigo != null && codigo.equals("")) {
+        if (codigo != null && !codigo.equals("")) {
             pj.setCodigo(Integer.parseInt(codigo));
         }
         try {
@@ -143,7 +143,8 @@ public class PessoaJuridicaServlet extends HttpServlet {
                 request.setAttribute("mensagem", "Pessoa Jurídica Atualizada com Sucesso!");
             } else {//se nao, salvo pj
                 //chamo o método DAO salvar Pessoa jurídica
-                PessoaJuridicaDAO.salvar(pj);
+                pjdao.salvar(pj);
+                
                 //Seto uma mensagem na tela dizendo que foi salvo com sucesso
                 request.setAttribute("mensagem", "Pessoa Jurídica Salva com Sucesso!");
                 //request.setAttribute("pj", pj);
@@ -157,7 +158,7 @@ public class PessoaJuridicaServlet extends HttpServlet {
             Logger.getLogger(PessoaJuridicaServlet.class.getName()).log(Level.SEVERE, null, ex);
             request.setAttribute("pj", pj);
         }catch(NullPointerException ex){
-            request.setAttribute("mensagem", "Erro de Validação dos Campos Obrigatórios");
+            request.setAttribute("mensagem", "Erro NullPointerException");
             Logger.getLogger(PessoaJuridicaServlet.class.getName()).log(Level.SEVERE, null, ex);
             request.setAttribute("pj", pj);
         }

@@ -80,6 +80,7 @@ public class PessoaJuridicaDAO {
         }
         throw new ValidacaoException("Não foi encontrado fornecedor de código: " + codPessoaJuridica);
     }
+    
 
     public void atualizar(PessoaJuridica pj) throws SQLException, ValidacaoException  {
         //Inicio a conexão com o banco de dados
