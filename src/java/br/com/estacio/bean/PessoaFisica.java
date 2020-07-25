@@ -20,6 +20,21 @@ public class PessoaFisica extends Pessoa{
     private String telefone1;
     private String telefone2;
 
+    public PessoaFisica(Integer codigo, String nomeCompleto, String cpf, String rg, String email, float salario, String funcao, String departamento, String telefone1, String telefone2) {
+        super(codigo);
+        this.nomeCompleto = nomeCompleto;
+        this.cpf = cpf;
+        this.rg = rg;
+        this.email = email;
+        this.salario = salario;
+        this.funcao = funcao;
+        this.departamento = departamento;
+        this.telefone1 = telefone1;
+        this.telefone2 = telefone2;
+    }
+
+    
+    
     
     
     /**

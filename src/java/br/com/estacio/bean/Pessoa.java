@@ -11,29 +11,24 @@ package br.com.estacio.bean;
  */
 public class Pessoa {
     
-    private int codigo;
+    private Integer codigo;
 
     public Pessoa() {
         
     }
 
-    public Pessoa(int codigo) {
+    public Pessoa(Integer codigo) {
         this.codigo = codigo;
     }
 
-    
-    /**
-     * @return the codigo
-     */
-    public int getCodigo() {
+    public Integer getCodigo() {
         return codigo;
     }
 
-    /**
-     * @param codigo the codigo to set
-     */
-    public void setCodigo(int codigo) {
+    public void setCodigo(Integer codigo) {
         this.codigo = codigo;
     }
+
+   
     
 }

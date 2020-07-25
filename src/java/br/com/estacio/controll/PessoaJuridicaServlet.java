@@ -121,7 +121,7 @@ public class PessoaJuridicaServlet extends HttpServlet {
      */
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
-            throws ServletException, IOException {
+            throws ServletException, IOException, NullPointerException {
 
         String nomeFantasia = request.getParameter("nomeFantasia");
         String razaoSocial = request.getParameter("razaoSocial");
@@ -138,7 +138,7 @@ public class PessoaJuridicaServlet extends HttpServlet {
         try {
             //verifico se os campos estão validados, ou seja, preenchidos corretamente
             pj.valida();
-            if (pj.getCodigo() != null) {
+            if (pj.getCodigo() != null) { 
                 pjdao.atualizar(pj);
                 request.setAttribute("mensagem", "Pessoa Jurídica Atualizada com Sucesso!");
             } else {//se nao, salvo pj
@@ -153,6 +153,10 @@ public class PessoaJuridicaServlet extends HttpServlet {
             request.setAttribute("pj", pj);
             Logger.getLogger(PessoaJuridicaServlet.class.getName()).log(Level.SEVERE, null, ex);
         } catch (ValidacaoException ex) {
+            request.setAttribute("mensagem", "Erro de Validação dos Campos Obrigatórios");
+            Logger.getLogger(PessoaJuridicaServlet.class.getName()).log(Level.SEVERE, null, ex);
+            request.setAttribute("pj", pj);
+        }catch(NullPointerException ex){
             request.setAttribute("mensagem", "Erro de Validação dos Campos Obrigatórios");
             Logger.getLogger(PessoaJuridicaServlet.class.getName()).log(Level.SEVERE, null, ex);
             request.setAttribute("pj", pj);

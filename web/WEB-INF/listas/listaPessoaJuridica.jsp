@@ -41,7 +41,7 @@
             <input type="text" class="form-control form-control-sm" id="inscricaoMunicipal"  name="inscricaoMunicipal" value="${pj.inscricaoMunicipal}">
         </div>
     </div>
-    <input class="btn btn-success" type="submit" value="Cadastrar">
+    <input class="btn btn-success" type="submit" value="Salvar">
     <input class="btn btn-light" type="reset" value="Limpar">
 
 

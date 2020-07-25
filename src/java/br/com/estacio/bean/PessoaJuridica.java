@@ -45,7 +45,7 @@ public class PessoaJuridica extends Pessoa {
         this.inscricaoMunicipal = inscricaoMunicipal;
     }
 
-    public PessoaJuridica(int codigo, String nomeFantasia, String razaoSocial, String cnpj, String inscricaoEstadual, String inscricaoMunicipal) {
+    public PessoaJuridica(Integer codigo, String nomeFantasia, String razaoSocial, String cnpj, String inscricaoEstadual, String inscricaoMunicipal) {
         super(codigo);
         this.nomeFantasia = nomeFantasia;
         this.razaoSocial = razaoSocial;
@@ -54,6 +54,7 @@ public class PessoaJuridica extends Pessoa {
         this.inscricaoMunicipal = inscricaoMunicipal;
     }
 
+ 
     /**
      * @return the nomeFantasia
      */
